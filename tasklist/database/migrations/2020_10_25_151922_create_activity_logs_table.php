@@ -16,6 +16,7 @@ class CreateActivityLogsTable extends Migration
         Schema::create('activity_logs', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id')->index();
+            $table->string('type_activity');
             $table->string('activity');
             $table->timestamps();
         });
